@@ -1,51 +1,45 @@
 /**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * @typedef TtodoItem
+ * @type {object}
+ * @property {number} id
+ * @property {string} title
+ * @property {boolean} isDone
+ * @property {string} category
+ * @property {Ttag[]} [tags]
  */
-function Book(title, author) {}
 
 /**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
+ * @typedef Ttag
+ * @type {object}
+ * @property {number} id
+ * @property {string} title
  */
-function foo() {}
 
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
 
 /**
- * Generic dairy product.
- * @constructor
+ * Create new todo at todos list.
+ * @param {TtodoItem[]} todoList - The list of todos.
+ * @param {TtodoItem} todoItem - The todo which will be added at todos.
  */
-function DairyProduct() {}
+function createItem(todoList, todoItem) {}
 
 /**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
+ * Read todo list or specific item of todo list.
+ * @param {TtodoItem[]} todoList - The list of todos.
+ * @param {number} todoId - The identifier of item user want to read.
  */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
+function readList(todoList, todoId) {}
 
+// Update todo list item with new item which will be replaced
 /**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
+ * @param {TtodoItem[]} todoList 
+ * @param {TtodoItem} updatedTodoItem
  */
-function Milk() {}
+function updateItem(todoList, updatedTodoItem) {}
 
+// Delete todo list item based on id
 /**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
+ * @param {TtodoItem[]} todoList
+ * @param {TtodoItem} deletedTodoItem
  */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+function deleteItem(todoList, deletedTodoItem) {}
