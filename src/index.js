@@ -15,6 +15,14 @@
  * @property {string} title
  */
 
+/**
+ * @typedef TdeleteTodoParam
+ * @type {object}
+ * @property {number} id
+ * @property {Ttag[]} [tags]
+ */
+
+
 
 /**
  * Create new todo at todos list.
@@ -37,9 +45,10 @@ function readList(todoList, todoId) {}
  */
 function updateItem(todoList, updatedTodoItem) {}
 
-// Delete todo list item based on id
+// Delete todo list item based on id. 
+// If you delete whole tags or specific tag, pass new tags list(specific tag or whole tags deleted) at second param.
 /**
  * @param {TtodoItem[]} todoList
- * @param {TtodoItem} deletedTodoItem
+ * @param {TdeleteTodoParam} deletedTodoItem 
  */
 function deleteItem(todoList, deletedTodoItem) {}
