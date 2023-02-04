@@ -1,7 +1,8 @@
 ## 챌린지 과제 가이드
 
-## 배포된 페이지[https://app.netlify.com/sites/storied-monstera-9bff02/overview]
+## 배포된 페이지[https://storied-monstera-9bff02.netlify.app/global.html#createItem]
 Github pages에 이미 블로그가 있어서 Netlify로 사이트 올렸습니다.
+
 
 >요구 사항을 구현하지 않고 설계만합니다.
 
