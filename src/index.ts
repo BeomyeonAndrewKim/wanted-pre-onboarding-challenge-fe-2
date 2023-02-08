@@ -22,6 +22,23 @@
  * @property {Ttag[]} [tags]
  */
 
+interface TtodoItem {
+  id: number;
+  title: string;
+  isDone: boolean;
+  category: string;
+  tags?: Ttag[]
+}
+
+interface Ttag {
+  id: number;
+  title: string
+}
+
+interface TdeleteTodoParam {
+  id: number;
+  tags?: Ttag[];
+}
 
 
 /**
@@ -30,7 +47,8 @@
  * @param {TtodoItem} todoItem - The todo which will be added at todos.
  * @returns {void}
  */
-function createItem(todoList, todoItem) {}
+
+function createItem(todoList: TtodoItem[], todoItem: TtodoItem): void { }
 
 /**
  * Read todo list or specific item of todo list.
@@ -38,7 +56,7 @@ function createItem(todoList, todoItem) {}
  * @param {number} todoId - The identifier of item user want to read.
  * @returns {void}
  */
-function readList(todoList, todoId) {}
+function readList(todoList: TtodoItem[], todoId: number) { }
 
 // Update todo list item with new item which will be replaced
 /**
@@ -46,7 +64,7 @@ function readList(todoList, todoId) {}
  * @param {TtodoItem} updatedTodoItem
  * @returns {void}
  */
-function updateItem(todoList, updatedTodoItem) {}
+function updateItem(todoList: TtodoItem[], updatedTodoItem: TtodoItem) { }
 
 // Delete todo list item based on id. 
 // If you delete whole tags or specific tag, pass new tags list(specific tag or whole tags deleted) at second param.
@@ -55,4 +73,4 @@ function updateItem(todoList, updatedTodoItem) {}
  * @param {TdeleteTodoParam} deletedTodoItem 
  * @returns {void}
  */
-function deleteItem(todoList, deletedTodoItem) {}
+function deleteItem(todoList: TtodoItem[], deletedTodoItem: TdeleteTodoParam) { }
