@@ -28,6 +28,7 @@
  * Create new todo at todos list.
  * @param {TtodoItem[]} todoList - The list of todos.
  * @param {TtodoItem} todoItem - The todo which will be added at todos.
+ * @returns {void}
  */
 function createItem(todoList, todoItem) {}
 
@@ -35,6 +36,7 @@ function createItem(todoList, todoItem) {}
  * Read todo list or specific item of todo list.
  * @param {TtodoItem[]} todoList - The list of todos.
  * @param {number} todoId - The identifier of item user want to read.
+ * @returns {void}
  */
 function readList(todoList, todoId) {}
 
@@ -42,6 +44,7 @@ function readList(todoList, todoId) {}
 /**
  * @param {TtodoItem[]} todoList 
  * @param {TtodoItem} updatedTodoItem
+ * @returns {void}
  */
 function updateItem(todoList, updatedTodoItem) {}
 
@@ -50,5 +53,6 @@ function updateItem(todoList, updatedTodoItem) {}
 /**
  * @param {TtodoItem[]} todoList
  * @param {TdeleteTodoParam} deletedTodoItem 
+ * @returns {void}
  */
 function deleteItem(todoList, deletedTodoItem) {}
