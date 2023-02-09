@@ -1,3 +1,5 @@
+//ts
+
 interface TtodoItem {
   id: number;
   title: string;
